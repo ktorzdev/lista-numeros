@@ -8,7 +8,7 @@ class Numeros {
   }
 
   adicionaNumeros(numeros) {
-    let campoLista = document.querySelector('#lista')
+    let campoLista = document.querySelector('#apresentarLista')
     let lista = this.inserirNumeros(numeros)
     let listaOrdenada = this.ordenaLista(lista)
     campoLista.textContent = `[${listaOrdenada}]`
@@ -48,7 +48,7 @@ class Numeros {
 
   numerosPares() {
     let lista = this.lista
-    let campoLista = document.querySelector('#resultado')
+    let campoLista = document.querySelector('#numeros')
     let resultado = []
 
     for (let i = 0; i <= lista.length; i++) {
@@ -62,7 +62,7 @@ class Numeros {
 
   numerosImpares() {
     let lista = this.lista
-    let campoLista = document.querySelector('#resultado')
+    let campoLista = document.querySelector('#numeros')
     let resultado = []
 
     for (let i = 0; i <= lista.length; i++) {

@@ -1,47 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Par ou Impar</title>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Números Pares ou Números Ímpares?</h1>
+  </head>
+  <body>
+    <header>
+      <h1>Números Pares ou Ímpares</h1>
+    </header>
+    <form onsubmit="event.preventDefault()">
+      <p>
+        <label for="inputNumber">Informe o número</label>
+      </p>
+      <input type="text" id="inputNumber" name="inputNumber">
+      <input type="submit" value="Adicionar" onclick="numero.salvar()">
+    </form>
 
-  <div class="main">
-    <div class="form">
-      <label for="inputNumber">
-        <span id="number">Informe o número:</span>
-        <input type="text" id="inputNumber">
-      </label>
-  
-      <button id="buttonAdd" onclick="numero.salvar()">Adicionar na Lista</button>
-
-      <div class="list">
-        <p>Lista: <span id="lista"></span></p>
-      </div>
-    </div>
-    
-    <div class="actions">
-      <div class="pares">
-        <button id="par" onclick="numero.numerosPares()">Números Pares</button>
-      </div>
-      <div class="impares">
-        <button id="impar" onclick="numero.numerosImpares()">Números Ímpares</button>
-      </div>
+    <div class="listagem">
+      <span id="apresentarLista"></span>
     </div>
 
-    <div class="result">
-      <span id="this"></span><span id="resultado"></span>
+    <div class="button-container">
+      <button class="par" onclick="numero.numerosPares()">Pares</button>
+      <button class="impar" onclick="numero.numerosImpares()">Ímpares</button>
     </div>
-  </div>
 
-  <script src="app.js"></script>
-</body>
+    <div class="resultado">
+      <span id="numeros"></span>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
