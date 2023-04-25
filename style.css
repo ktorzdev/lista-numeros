@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --blue1: #0033CC;
+  --blue2: #0066CC;
+  --impar: #FFFF66;
+  --imparHover: #FFCC00;
+  --par: #00CC66;
+  --parHover: #339966;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: var(--blue1);
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 160px;
+  height: 32px;
+  border: 1px solid var(--blue2);
+  border-radius: 4px;
+  outline: none;
+  padding-left: 8px;
+}
+
+#number {
+  font-weight: bold;
+}
+
+#buttonAdd {
+  width: 160px;
+  height: 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background-color: var(--blue2);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#buttonAdd:hover {
+  background-color: var(--blue1);
+  transition: .2s;
+}
+
+.list {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.actions {
+  width: 420px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.actions .pares button {
+  width: 160px;
+  height: 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background-color: var(--par);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .2s;
+  margin-right: 24  px;
+}
+
+.actions .pares button:hover {
+  background-color: var(--parHover);
+  transition: .2s;
+}
+
+.actions .impares button {
+  width: 160px;
+  height: 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background-color: var(--impar);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .2s;
+  margin-left: 24px;
+}
+
+.actions .impares button:hover {
+  background-color: var(--imparHover);
+  transition: .2s;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+}
